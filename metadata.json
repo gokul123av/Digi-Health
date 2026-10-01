@@ -1,0 +1,6 @@
+{
+  "name": "DegiHealth - Federated Clinical Network",
+  "description": "Securely manage and access longitudinal medical history, emergency cards, and clinical diagnostics with confidence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
