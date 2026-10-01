@@ -755,15 +755,30 @@ export const PatientPortal: React.FC<PatientPortalProps> = ({
                         <span className="text-[11px] font-bold text-slate-600 block mb-2">Active Data Scopes:</span>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 text-xs text-slate-600">
                           <label className="flex items-center gap-2">
-                            <input type="checkbox" checked={perm.scopes.timeline && perm.status === 'active'} readOnly className="accent-[#005a7d]" />
+                            <input 
+                              type="checkbox" 
+                              checked={Boolean(perm.scopes?.timeline ?? true) && perm.status === 'active'} 
+                              readOnly 
+                              className="accent-[#005a7d]" 
+                            />
                             <span>Timeline</span>
                           </label>
                           <label className="flex items-center gap-2">
-                            <input type="checkbox" checked={perm.scopes.prescriptions && perm.status === 'active'} readOnly className="accent-[#005a7d]" />
+                            <input 
+                              type="checkbox" 
+                              checked={Boolean(perm.scopes?.prescriptions ?? true) && perm.status === 'active'} 
+                              readOnly 
+                              className="accent-[#005a7d]" 
+                            />
                             <span>Prescriptions</span>
                           </label>
                           <label className="flex items-center gap-2">
-                            <input type="checkbox" checked={perm.scopes.labReports && perm.status === 'active'} readOnly className="accent-[#005a7d]" />
+                            <input 
+                              type="checkbox" 
+                              checked={Boolean(perm.scopes?.labReports ?? true) && perm.status === 'active'} 
+                              readOnly 
+                              className="accent-[#005a7d]" 
+                            />
                             <span>Lab Reports</span>
                           </label>
                         </div>

@@ -381,13 +381,19 @@ app.get('/api/patients', async (req, res) => {
           {
             id: 'perm-01',
             doctorName: 'Dr. Marcus Vance, MD',
-            specialty: 'Cardiology',
+            specialty: 'Cardiovascular & Internal Medicine',
             hospital: 'St. Jude Academic Medical Center',
+            licenseNumber: 'MED-94021',
             grantedDate: '2026-08-10',
-            expiryDate: '2027-08-10',
-            accessLevel: 'full' as const,
+            expiresIn: 'Annual Authorized Clinician',
             status: 'active' as const,
-            purpose: 'Longitudinal cardiac tracking & clinical prescription management'
+            scopes: {
+              timeline: true,
+              prescriptions: true,
+              labReports: true,
+              imaging: true,
+              emergencyOnly: false
+            }
           }
         ],
         accessLogs: patientLogs
